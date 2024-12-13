@@ -32,7 +32,7 @@ const ProgressWidget = () => {
 
     return (
         <div className="bg-white p- rounded-lg shadow-lg w-full max-w-md mx-auto mt-4" id="progress"
-        style={{ backgroundImage: `url(${hj})` }}
+        style={{ backgroundImage: `url(${hj})` , backgroundSize: 'cover', backgroundPosition: 'center' }}
 
         >
             <h3 className="text-xl font-semibold text-center mb-4">Progress Tracker</h3>

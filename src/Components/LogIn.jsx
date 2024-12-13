@@ -44,7 +44,7 @@ function Login() {
 
   return (
     <div className="login-container flex flex-col items-center justify-center min-h-screen bg-whitesmoke p-6"
-    style={{ backgroundImage: `url(${hj})` }}
+    style={{ backgroundImage: `url(${hj})`, backgroundSize: 'cover', backgroundPosition: 'center'  }}
     
     >
       {/* Logo */}

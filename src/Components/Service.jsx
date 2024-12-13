@@ -52,7 +52,7 @@ const Service = () => {
 
     return (
         <div className="service-page bg-gray-100 min-h-screen p-8"
-        style={{ backgroundImage: `url(${hj})` }}
+        style={{ backgroundImage: `url(${hj})`, backgroundSize: 'cover', backgroundPosition: 'center'  }}
 >
             <h1
                 className={`text-3xl font-bold text-center text-gray-800 mb-8 transition-all duration-700 ${

@@ -15,7 +15,7 @@ const FAQs = () => {
 
     return (
         <div className="faqs-page p-6 bg-gray-100 min-h-screen flex flex-col items-center"
-        style={{ backgroundImage: `url(${hj})` }}
+        style={{ backgroundImage: `url(${hj})`, backgroundSize: 'cover', backgroundPosition: 'center'  }}
 
         >
             <h1

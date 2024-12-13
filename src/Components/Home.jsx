@@ -74,13 +74,12 @@ function Home() {
 
     return (
         <div className="home-container flex flex-col items-center p-6 bg-whitesmoke min-h-screen font-fun"
-        style={{ backgroundImage: `url(${hj})` }}
 
         >
             {/* Full screen card with image and logo overlay at bottom */}
             <div className="relative w-full h-screen mb-8">
                 <img
-                    src={tutoringImage}
+                    src={hj}
                     className={`w-full h-full object-cover rounded-lg transition-all duration-700 ${
                         showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                     }`}

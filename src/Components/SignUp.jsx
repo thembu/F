@@ -74,7 +74,7 @@ function SignUp() {
 
   return (
     <div className="sign-up-container flex flex-col items-center justify-center min-h-screen bg-whitesmoke p-6 transition-all duration-500 ease-in-out"
-    style={{ backgroundImage: `url(${hj})` }}
+    style={{ backgroundImage: `url(${hj})` , backgroundSize: 'cover', backgroundPosition: 'center' }}
 
     >
       <h2 className="text-3xl font-bold text-gray-800 mb-6 transition-all duration-500 ease-in-out">Sign Up to Tlowedi Tutoring Solutions</h2>
