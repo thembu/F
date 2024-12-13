@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import hj from '../assets/no.png'
+import ol from '../assets/ol.jpg'
+
 
 
 const Contact = () => {
@@ -15,7 +17,7 @@ const Contact = () => {
 
     return (
         <div className="contact-page flex flex-col items-center p-6 bg-gray-100 min-h-screen"
-        style={{ backgroundImage: `url(${hj})` , backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: `url(${ol})` , backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
             <h1
                 className={`text-3xl font-bold text-center text-gray-800 mb-6 transition-all duration-500 ${

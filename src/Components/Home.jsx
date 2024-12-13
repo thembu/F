@@ -4,6 +4,12 @@ import tutoringImage from '../assets/tutor.jpg'; // Import the tutoring image
 import { Line } from 'react-chartjs-2'; // Import the Line chart from react-chartjs-2
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend } from 'chart.js'; // Import necessary components from chart.js
 import hj from '../assets/no.png'
+import tt from '../assets/lo.gif'; // Import the TTS logo
+import po from '../assets/po.jpeg'; // Import the TTS logo
+import ol from '../assets/ol.jpg'; // Import the TTS logo
+
+
+
 
 // Register the necessary chart.js components
 ChartJS.register(
@@ -74,23 +80,24 @@ function Home() {
 
     return (
         <div className="home-container flex flex-col items-center p-6 bg-whitesmoke min-h-screen font-fun"
+        style={{ backgroundImage: `url(${ol})` , backgroundSize: 'cover', backgroundPosition: 'center' }}
 
         >
             {/* Full screen card with image and logo overlay at bottom */}
             <div className="relative w-full h-screen mb-8">
                 <img
                     src={hj}
-                    className={`w-full h-full object-cover rounded-lg transition-all duration-700 ${
+                    className={`w-full h-full object-cover rounded-lg transition-all duration-900 ${
                         showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                     }`}
                     alt="Kids being tutored"
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-30 flex justify-center py-4">
+                <div className="absolute bottom-80 left-0 w-full bg-black bg-opacity-30 flex justify-center py-2">
                     <img
-                        src={tts_logo}
+                        src={tt}
                         className="logo transition-all duration-700 opacity-100 scale-100"
                         alt="TTS logo"
-                        width={120} // Adjust size for mini logo
+                        width={470} // Adjust size for mini logo
                     />
                 </div>
             </div>
