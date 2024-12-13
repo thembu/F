@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import hj from '../assets/no.png'
+
 
 const Service = () => {
     const [showContent, setShowContent] = useState(false);
@@ -49,7 +51,9 @@ const Service = () => {
     ];
 
     return (
-        <div className="service-page bg-gray-100 min-h-screen p-8">
+        <div className="service-page bg-gray-100 min-h-screen p-8"
+        style={{ backgroundImage: `url(${hj})` }}
+>
             <h1
                 className={`text-3xl font-bold text-center text-gray-800 mb-8 transition-all duration-700 ${
                     showContent ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
