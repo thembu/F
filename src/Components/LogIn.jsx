@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation after successful login
-import tts_logo from '../assets/tts_logo.jpeg'; // Import the TTS logo
+import tts_logo from '../assets/lo.gif'; // Import the TTS logo
 import { signIn } from '../firebaseFunctions';
+import hj from '../assets/no.png'
 
 
 function Login() {
@@ -42,13 +43,16 @@ function Login() {
   };
 
   return (
-    <div className="login-container flex flex-col items-center justify-center min-h-screen bg-whitesmoke p-6">
+    <div className="login-container flex flex-col items-center justify-center min-h-screen bg-whitesmoke p-6"
+    style={{ backgroundImage: `url(${hj})` }}
+    
+    >
       {/* Logo */}
       <img
         src={tts_logo}
         alt="TTS Logo"
-        className={`mb-6 w-40 transition-all duration-700 ${
-          showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+        className={`mb-6 w-50 transition-all duration-700  ${
+          showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
         }`}
       />
 
