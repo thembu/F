@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';  // Added useEffect importimport 
 import k from '../assets/h.webp';
 import l from '../assets/l.jpg';
+import hj from '../assets/no.png'
 
 
 // Sample session data
@@ -30,7 +31,10 @@ const ProgressWidget = () => {
     const [progress, setProgress] = useState(70); // Example progress percentage
 
     return (
-        <div className="bg-white p- rounded-lg shadow-lg w-full max-w-md mx-auto mt-4" id="progress">
+        <div className="bg-white p- rounded-lg shadow-lg w-full max-w-md mx-auto mt-4" id="progress"
+        style={{ backgroundImage: `url(${hj})` }}
+
+        >
             <h3 className="text-xl font-semibold text-center mb-4">Progress Tracker</h3>
             <div className="w-full h-5 bg-gray-200 rounded-full">
                 <div

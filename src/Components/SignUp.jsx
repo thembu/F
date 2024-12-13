@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation after successful sign-up
 import { signUp } from '../firebaseFunctions'; // Import sign-up function from firebaseFunctions.js
+import hj from '../assets/no.png'
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -72,7 +73,10 @@ function SignUp() {
   };
 
   return (
-    <div className="sign-up-container flex flex-col items-center justify-center min-h-screen bg-whitesmoke p-6 transition-all duration-500 ease-in-out">
+    <div className="sign-up-container flex flex-col items-center justify-center min-h-screen bg-whitesmoke p-6 transition-all duration-500 ease-in-out"
+    style={{ backgroundImage: `url(${hj})` }}
+
+    >
       <h2 className="text-3xl font-bold text-gray-800 mb-6 transition-all duration-500 ease-in-out">Sign Up to Tlowedi Tutoring Solutions</h2>
 
       {/* Sign-up Form */}

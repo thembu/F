@@ -3,6 +3,7 @@ import tts_logo from '../assets/tts_logo.jpeg'; // Import the TTS logo
 import tutoringImage from '../assets/tutor.jpg'; // Import the tutoring image
 import { Line } from 'react-chartjs-2'; // Import the Line chart from react-chartjs-2
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend } from 'chart.js'; // Import necessary components from chart.js
+import hj from '../assets/no.png'
 
 // Register the necessary chart.js components
 ChartJS.register(
@@ -72,7 +73,10 @@ function Home() {
     };
 
     return (
-        <div className="home-container flex flex-col items-center p-6 bg-whitesmoke min-h-screen font-fun">
+        <div className="home-container flex flex-col items-center p-6 bg-whitesmoke min-h-screen font-fun"
+        style={{ backgroundImage: `url(${hj})` }}
+
+        >
             {/* Full screen card with image and logo overlay at bottom */}
             <div className="relative w-full h-screen mb-8">
                 <img

@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import hj from '../assets/no.png'
+
 
 const FAQs = () => {
     const [showContent, setShowContent] = useState(false);
@@ -12,7 +14,10 @@ const FAQs = () => {
     }, []);
 
     return (
-        <div className="faqs-page p-6 bg-gray-100 min-h-screen flex flex-col items-center">
+        <div className="faqs-page p-6 bg-gray-100 min-h-screen flex flex-col items-center"
+        style={{ backgroundImage: `url(${hj})` }}
+
+        >
             <h1
                 className={`text-3xl font-bold text-center text-gray-800 mb-6 transition-all duration-500 ${
                     showContent ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
