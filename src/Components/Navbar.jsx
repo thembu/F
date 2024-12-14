@@ -7,6 +7,7 @@ const Navbar = () => {
 
   // Handle navigation and close the sidebar
   const handleNavigation = (path) => {
+    console.log(path);
     navigate(path);
     setSidebarOpen(false); // Close sidebar after navigation
   };
@@ -86,57 +87,59 @@ const Navbar = () => {
 
       {/* Sidebar (Visible on small screens when open) */}
       {sidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
-          <div className="w-64 h-full bg-navbarblack shadow-lg">
-            <ul className="space-y-4 p-4 text-blue-500">
-              <li
-                className="cursor-pointer hover:text-white"
-                onClick={() => handleNavigation('/about')}
-              >
-                About Us
-              </li>
-              <li
-                className="cursor-pointer hover:text-white"
-                onClick={() => handleNavigation('/service')}
-              >
-                Services
-              </li>
-              <li
-                className="cursor-pointer hover:text-white"
-                onClick={() => handleNavigation('/pricing')}
-              >
-                Pricing
-              </li>
-              <li
-                className="cursor-pointer hover:text-white"
-                onClick={() => handleNavigation('/faqs')}
-              >
-                FAQs
-              </li>
-              <li
-                className="cursor-pointer hover:text-white"
-                onClick={() => handleNavigation('/contact')}
-              >
-                Contact Us
-              </li>
-              <li
-                className="cursor-pointer text-white px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-700 transition-colors"
-                onClick={() => handleNavigation('/login')}
-              >
-                Log In
-              </li>
-              <li
-                className="cursor-pointer text-white px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-700 transition-colors"
-                onClick={() => handleNavigation('/signup')}
-              >
-                Sign Up
-              </li>
-            </ul>
-          </div>
-          {/* Overlay: Clicking outside the sidebar closes it */}
-          <div className="fixed inset-0" onClick={() => setSidebarOpen(false)} />
-        </div>
-      )}
+  <div className="fixed inset-0 z-50 bg-black bg-opacity-75" onClick={() => setSidebarOpen(false)}>
+    <div
+      className="w-64 h-full bg-navbarblack shadow-lg"
+      onClick={(event) => event.stopPropagation()} // Stop click propagation
+    >
+      <ul className="space-y-4 p-4 text-blue-500">
+        <li
+          className="cursor-pointer hover:text-white"
+          onClick={() => handleNavigation('/about')}
+        >
+          About Us
+        </li>
+        <li
+          className="cursor-pointer hover:text-white"
+          onClick={() => handleNavigation('/service')}
+        >
+          Services
+        </li>
+        <li
+          className="cursor-pointer hover:text-white"
+          onClick={() => handleNavigation('/pricing')}
+        >
+          Pricing
+        </li>
+        <li
+          className="cursor-pointer hover:text-white"
+          onClick={() => handleNavigation('/faqs')}
+        >
+          FAQs
+        </li>
+        <li
+          className="cursor-pointer hover:text-white"
+          onClick={() => handleNavigation('/contact')}
+        >
+          Contact Us
+        </li>
+        <li
+          className="cursor-pointer text-white px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-700 transition-colors"
+          onClick={() => handleNavigation('/login')}
+        >
+          Log In
+        </li>
+        <li
+          className="cursor-pointer text-white px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-700 transition-colors"
+          onClick={() => handleNavigation('/signup')}
+        >
+          Sign Up
+        </li>
+      </ul>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };
